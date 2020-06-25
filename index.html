@@ -1,13 +1,32 @@
 <style>
   #ngame {
-    width: 100vw;
-    height: 100vh;
     position: fixed;
     overflow: hidden;
+    width: 100vw;
+    height: 115vh;
     border: none;
-    top: 1rem;
-    transform: scaleY(1.2);
+    z-index: -1;
+    top: -2em;
+  }
+  .hide {
+    background: red;
+    z-index: 99;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+  }
+  #top-bar {
+    top: 0;
+    height: 0rem;
+  }
+  #bottom-bar {
+    bottom: 0;
+    height: 0rem;
   }
 </style>
 
 <iframe id="ngame" src="https://stackblitz.com/edit/elojs-chapter16-a-platformer-game-for-fun-ahihihihi-current-ver?embed=1&file=zzz_for_fking_stupid_preview_purpose_on_mobile_only_zzz.jsx&hideExplorer=1&hideNavigation=1&view=preview"></iframe>
+
+
+<div class="hide" id="top-bar"></div>
+<div class="hide" id="bottom-bar"></div>
