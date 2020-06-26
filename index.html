@@ -9,6 +9,8 @@
   <meta name="mobile-web-app-capable" content="yes"> <!--Chrome-->
   <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no" />
   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+  
   <style>
     #ngame {
       position: fixed;
@@ -43,5 +45,8 @@
 <div class="hide" id="top-bar"></div>
 <div class="hide" id="bottom-bar"></div>
 
+  <script>
+    $.mobile.zoom.disable();
+  </script>
 </body>
 </html>
