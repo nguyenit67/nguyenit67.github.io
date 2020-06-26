@@ -52,13 +52,13 @@
 <span id="sizelog"></span>
   
 <script>
-  const sizelog = document.querySelector('#sizelog');
-
-function reportWindowSize() {
-  sizelog.textContent = window.innerHeight + " " + window.innerWidth;
-}
-
-window.onresize = reportWindowSize;
+  function update(event) {
+    event.preventDefault ();
+  }
+  window.addEventListener("touchstart", update);
+  window.addEventListener("touchmove", update);
+  window.addEventListener("touchend", update);
+  window.addEventListener("touchcancel", update);
 </script>
 
 </body>
