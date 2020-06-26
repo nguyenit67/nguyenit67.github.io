@@ -33,6 +33,12 @@
       bottom: 0;
       height: 0rem;
     }
+    #sizelog {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 99;
+    }
   </style>
 </head>
 
@@ -42,6 +48,18 @@
 
 <div class="hide" id="top-bar"></div>
 <div class="hide" id="bottom-bar"></div>
+<span id="height"></span>
+<span id="sizelog"></span>
+  
+<script>
+  const sizelog = document.querySelector('#sizelog');
+
+function reportWindowSize() {
+  sizelog.textContent = window.innerHeight + " " + window.innerWidth;
+}
+
+window.onresize = reportWindowSize;
+</script>
 
 </body>
 </html>
