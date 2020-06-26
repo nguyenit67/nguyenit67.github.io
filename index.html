@@ -10,6 +10,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
   
   <style>
+    * {
+      user-select: none;
+      user-zoom: fixed;
+      touch-action: none;
+    }
     #ngame {
       position: fixed;
       overflow: hidden;
@@ -33,12 +38,6 @@
       bottom: 0;
       height: 0rem;
     }
-    #sizelog {
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 99;
-    }
   </style>
 </head>
 
@@ -48,18 +47,6 @@
 
 <div class="hide" id="top-bar"></div>
 <div class="hide" id="bottom-bar"></div>
-<span id="height"></span>
-<span id="sizelog"></span>
-  
-<script>
-  function update(event) {
-    event.preventDefault ();
-  }
-  window.addEventListener("touchstart", update);
-  window.addEventListener("touchmove", update);
-  window.addEventListener("touchend", update);
-  window.addEventListener("touchcancel", update);
-</script>
 
 </body>
 </html>
